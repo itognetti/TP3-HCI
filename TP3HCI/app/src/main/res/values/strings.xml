@@ -3,4 +3,6 @@
     <string name="home_screen">Home</string>
     <string name="search_screen">Search</string>
     <string name="profile_screen">Profile</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="log_out_profile">Log Out</string>
 </resources>

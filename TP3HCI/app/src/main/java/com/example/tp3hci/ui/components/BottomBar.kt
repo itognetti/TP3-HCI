@@ -6,7 +6,6 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import com.example.tp3hci.Screen
-import com.example.tp3hci.ui.theme.Osc
 
 @Composable
 fun BottomBar(
