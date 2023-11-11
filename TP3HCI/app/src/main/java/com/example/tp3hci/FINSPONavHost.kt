@@ -2,14 +2,27 @@ package com.example.tp3hci
 
 //import androidx.compose.runtime.Composable
 //import androidx.navigation.NavHostController
-//import androidx.navigation.NavType
 //import androidx.navigation.compose.NavHost
 //import androidx.navigation.compose.composable
-//import androidx.navigation.compose.rememberNavController
-//import androidx.navigation.navArgument
-//import androidx.navigation.navDeepLink
-//import com.example.tp3hci.ui.screens.TESTHomeScreen
-//import com.example.tp3hci.ui.screens.OtherScreen
+//import com.example.tp3hci.ui.screens.LoginRegisterScreen
+
+//PROBÉ A VER SI VEÍA LA PANTALLA DEL GORDO
+
+//@Composable
+//fun FINSPONavHost(navController: NavHostController){
+//    NavHost(
+//        navController = navController,
+//        startDestination = Screen.HomeScreen.route
+//    ) {
+//        composable(Screen.LoginRegisterScreen.route) {
+//            LoginRegisterScreen()
+//        }
+//    }
+//}
+
+
+
+//ESTO HAY QUE MODIFICARLO BASTANTE
 
 //@Composable
 //fun FINSPONavHost(

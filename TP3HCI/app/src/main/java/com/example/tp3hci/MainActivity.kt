@@ -39,6 +39,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                     FINSPONavGraph(navController = navController)
                 }
+//              FINSPONavHost(navController = navController)
             }
         }
     }
