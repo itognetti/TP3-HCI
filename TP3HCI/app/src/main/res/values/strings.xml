@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">TP3HCI</string>
+    <string name="home_screen">Home</string>
+    <string name="search_screen">Search</string>
+    <string name="profile_screen">Profile</string>
+</resources>
