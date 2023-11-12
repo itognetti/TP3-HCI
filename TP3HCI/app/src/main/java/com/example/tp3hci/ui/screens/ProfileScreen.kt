@@ -29,17 +29,17 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.tp3hci.R
-import com.example.tp3hci.ui.theme.Orange
-import com.example.tp3hci.ui.theme.Osc
+import com.example.tp3hci.ui.theme.FOrange
 import androidx.compose.material3.Icon
 import androidx.compose.ui.graphics.Color
+import com.example.tp3hci.ui.theme.Black
 
 @Composable
 fun ProfileScreen() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(color = Osc)
+            .background(color = Black)
     ) {
         Column(
             modifier = Modifier
@@ -51,7 +51,7 @@ fun ProfileScreen() {
             Text(
                 text = stringResource(id = R.string.profile_screen),
                 fontSize = 30.sp,
-                color = Orange
+                color = FOrange
             )
 
             Icon(
@@ -77,7 +77,7 @@ fun ProfileScreen() {
                     .fillMaxWidth()
                     .height(50.dp),
                 colors = ButtonDefaults.buttonColors(Color.Transparent),
-                border = BorderStroke(1.dp, Orange),
+                border = BorderStroke(1.dp, FOrange),
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,

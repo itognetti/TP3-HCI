@@ -6,4 +6,6 @@
     <string name="edit_profile">Editar Perfil</string>
     <string name="log_out_profile">Cerrar Sesión</string>
     <string name="search_bar">Buscar</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="register">Registrarse</string>
 </resources>

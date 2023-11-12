@@ -11,8 +11,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import com.example.tp3hci.Screen
-import com.example.tp3hci.ui.theme.Orange
-import com.example.tp3hci.ui.theme.Osc
+import com.example.tp3hci.ui.theme.FOrange
+import com.example.tp3hci.ui.theme.Black
 import com.example.tp3hci.ui.theme.White
 
 @Composable
@@ -28,7 +28,7 @@ fun BottomBar(
 
     NavigationBar(
         modifier = Modifier.fillMaxWidth(),
-        containerColor = Osc
+        containerColor = Black
     ) {
         items.forEach { item ->
             NavigationBarItem(
@@ -36,21 +36,21 @@ fun BottomBar(
                     Icon(
                         imageVector = item.icon,
                         contentDescription = item.title,
-                        tint = if (currentRoute == item.route) Orange else White
+                        tint = if (currentRoute == item.route) FOrange else White
                     )
                 },
                 label = {
                     Text(
                         text = item.title,
-                        color = if (currentRoute == item.route) Orange else White
+                        color = if (currentRoute == item.route) FOrange else White
                     )
                 },
                 alwaysShowLabel = true,
                 selected = currentRoute == item.route,
                 onClick = { onNavigateToRoute(item.route) },
 //                colors = NavigationBarItemColors(
-//                    selectedIconColor = Orange,
-//                    selectedTextColor = Orange,
+//                    selectedIconColor = FOrange,
+//                    selectedTextColor = FOrange,
 //                    selectedIndicatorColor = Color.Transparent,
 //                    unselectedIconColor = White,
 //                    unselectedTextColor = White,

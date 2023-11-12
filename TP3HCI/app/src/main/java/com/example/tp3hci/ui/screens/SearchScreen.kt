@@ -15,15 +15,13 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import com.example.tp3hci.R
 import com.example.tp3hci.ui.components.CardItem
 import com.example.tp3hci.ui.components.SearchBar
-import com.example.tp3hci.ui.theme.Orange
-import com.example.tp3hci.ui.theme.Osc
+import com.example.tp3hci.ui.theme.Black
+import com.example.tp3hci.ui.theme.FOrange
 
-//@Preview
 @Composable
 fun SearchScreen() {
     var searchQuery by remember { mutableStateOf("") }
@@ -31,7 +29,7 @@ fun SearchScreen() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(color = Osc)
+            .background(color = Black)
             .verticalScroll(rememberScrollState()),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
@@ -39,7 +37,7 @@ fun SearchScreen() {
         Text(
             text = stringResource(id = R.string.search_screen),
             fontSize = 30.sp,
-            color = Orange
+            color = FOrange
         )
         SearchBar(onSearchTextChanged = { newQuery ->
             searchQuery = newQuery

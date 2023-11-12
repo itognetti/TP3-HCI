@@ -1,6 +1,5 @@
 package com.example.tp3hci.ui.components
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -24,8 +23,7 @@ import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import com.example.tp3hci.R
-import com.example.tp3hci.ui.theme.Osc
-import com.example.tp3hci.ui.theme.White
+import com.example.tp3hci.ui.theme.Black
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -46,11 +44,11 @@ fun SearchBar(
         },
         placeholder = { Text(
             text = stringResource(id = R.string.search_bar),
-            color = Osc
+            color = Black
         ) },
         leadingIcon = { Icon(
             Icons.Filled.Search, contentDescription = "Search",
-            tint = Osc
+            tint = Black
         ) },
         keyboardOptions = KeyboardOptions.Default.copy(
             imeAction = ImeAction.Done
@@ -62,10 +60,10 @@ fun SearchBar(
         ),
         singleLine = true,
         colors = TextFieldDefaults.textFieldColors(
-            textColor = Osc,
-            cursorColor = Osc,
-            focusedIndicatorColor = Osc,
-            unfocusedIndicatorColor = Osc
+            textColor = Black,
+            cursorColor = Black,
+            focusedIndicatorColor = Black,
+            unfocusedIndicatorColor = Black
         )
     )
 }
