@@ -5,4 +5,5 @@
     <string name="profile_screen">Profile</string>
     <string name="edit_profile">Edit Profile</string>
     <string name="log_out_profile">Log Out</string>
+    <string name="search_bar">Search</string>
 </resources>
