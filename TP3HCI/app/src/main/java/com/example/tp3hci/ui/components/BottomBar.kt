@@ -1,5 +1,6 @@
 package com.example.tp3hci.ui.components
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
@@ -32,6 +33,7 @@ fun BottomBar(
     ) {
         items.forEach { item ->
             NavigationBarItem(
+                modifier = Modifier.background(color = Color.Transparent),
                 icon = {
                     Icon(
                         imageVector = item.icon,

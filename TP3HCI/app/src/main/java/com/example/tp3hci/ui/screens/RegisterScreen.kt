@@ -1,6 +1,7 @@
 package com.example.tp3hci.ui.screens
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -22,6 +23,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -29,6 +31,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color.Companion.Gray
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -40,6 +43,7 @@ import androidx.compose.ui.unit.sp
 import com.example.tp3hci.R
 import com.example.tp3hci.ui.theme.Black
 import com.example.tp3hci.ui.theme.FOrange
+import com.example.tp3hci.ui.theme.Grey
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview(showSystemUi = true)
@@ -104,7 +108,9 @@ fun RegisterScreen() {
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(8.dp)
+                        .background(color = Gray)
                 )
+
 
                 Spacer(modifier = Modifier.height(16.dp))
 
@@ -116,6 +122,7 @@ fun RegisterScreen() {
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(8.dp)
+                        .background(color = Gray)
                 )
 
                 Spacer(modifier = Modifier.height(16.dp))
@@ -128,6 +135,7 @@ fun RegisterScreen() {
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(8.dp)
+                        .background(color = Gray)
                 )
 
                 Spacer(modifier = Modifier.height(16.dp))
@@ -140,6 +148,7 @@ fun RegisterScreen() {
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(8.dp)
+                        .background(color = Gray)
                 )
 
                 Spacer(modifier = Modifier.height(16.dp))
