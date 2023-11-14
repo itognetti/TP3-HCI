@@ -15,13 +15,14 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import com.example.tp3hci.R
 import com.example.tp3hci.ui.components.CardItem
 import com.example.tp3hci.ui.components.SearchBar
 import com.example.tp3hci.ui.theme.Black
 import com.example.tp3hci.ui.theme.FOrange
-
+@Preview
 @Composable
 fun SearchScreen() {
     var searchQuery by remember { mutableStateOf("") }

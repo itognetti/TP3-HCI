@@ -32,8 +32,9 @@ import com.example.tp3hci.R
 import com.example.tp3hci.ui.theme.FOrange
 import androidx.compose.material3.Icon
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
 import com.example.tp3hci.ui.theme.Black
-
+@Preview
 @Composable
 fun ProfileScreen() {
     Box(
