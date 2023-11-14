@@ -39,8 +39,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.tp3hci.R
-
-
+import com.example.tp3hci.ui.theme.FOrange
 
 
 @Preview(showSystemUi = true)
@@ -95,22 +94,22 @@ fun Rest() {
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             IconButton(onClick = { /* Manejar acción de repetición */ }) {
-                Icon(Icons.Default.Refresh, contentDescription = "Repetición")
+                Icon(Icons.Default.Refresh, contentDescription = "Repetición",tint = FOrange )
             }
             IconButton(onClick = { /* Manejar acción de flecha hacia atrás */ }) {
-                Icon(Icons.Default.ArrowBack, contentDescription = "Flecha hacia atrás")
+                Icon(Icons.Default.ArrowBack, contentDescription = "Flecha hacia atrás",tint = FOrange )
             }
 
             IconButton(onClick = { /* Manejar acción de pausa */ }) {
-                Icon(Icons.Default.PlayArrow, contentDescription = "Pausar")
+                Icon(Icons.Default.PlayArrow, contentDescription = "Pausar",tint = FOrange )
             }
 
             IconButton(onClick = { /* Manejar acción de siguiente */ }) {
-                Icon(Icons.Default.ArrowForward, contentDescription = "Flecha hacia adelante")
+                Icon(Icons.Default.ArrowForward, contentDescription = "Flecha hacia adelante",tint = FOrange )
             }
 
             IconButton(onClick = { /* Manejar acción de siguiente */ }) {
-                Icon(Icons.Default.List, contentDescription = "Listar")
+                Icon(Icons.Default.List, contentDescription = "Listar" ,tint = FOrange  )
             }
         }
         }
