@@ -46,7 +46,7 @@ import androidx.compose.ui.unit.sp
 import com.example.tp3hci.R
 import com.example.tp3hci.ui.theme.FOrange
 
-@Preview
+@Preview(showSystemUi = true)
 @Composable
 fun AboutUs() {
     Box(
