@@ -32,15 +32,20 @@ import com.example.tp3hci.R
 import com.example.tp3hci.ui.theme.FOrange
 import androidx.compose.material3.Icon
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.tp3hci.ui.theme.Black
-@Preview
+import com.example.tp3hci.ui.theme.MyBack
+
+
+@Preview(showSystemUi = true)
 @Composable
 fun ProfileScreen() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(color = Black)
+            .background(MyBack)
     ) {
         Column(
             modifier = Modifier
@@ -51,8 +56,9 @@ fun ProfileScreen() {
         ) {
             Text(
                 text = stringResource(id = R.string.profile_screen),
-                fontSize = 30.sp,
-                color = FOrange
+                color= Color.Black,
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Black,
             )
 
             Icon(
@@ -84,10 +90,11 @@ fun ProfileScreen() {
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.Center
                 ) {
-                    Icon(Icons.Filled.Edit, contentDescription = null)
+                    Icon(Icons.Filled.Edit, contentDescription = null,tint=Color.Black,)
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(
                         text = stringResource(id = R.string.edit_profile),
+                        color= Color.Black,
                         fontSize = 24.sp
                     )
                 }
@@ -109,10 +116,11 @@ fun ProfileScreen() {
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.Center
                 ) {
-                    Icon(Icons.Filled.ExitToApp, contentDescription = null)
+                    Icon(Icons.Filled.ExitToApp, contentDescription = null,tint=Color.Black,)
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(
                         text = stringResource(id = R.string.log_out_profile),
+                        color= Color.Black,
                         fontSize = 24.sp
                     )
                 }
