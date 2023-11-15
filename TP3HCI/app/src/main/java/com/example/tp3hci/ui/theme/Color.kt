@@ -14,3 +14,5 @@ val FOrange = Color(0xFFE47F4A)
 val Black = Color(0xFF000000)
 val White = Color(0xFFFFFFFF)
 val Grey = Color(0xFF949494)
+val BackCard = Color(0xFFE6DFEB)
+

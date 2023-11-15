@@ -13,4 +13,18 @@
     <string name="login_mail">Correo Electronico</string>
     <string name="login_password">Contraseña</string>
     <string name="login_repassword">Repetir Contraseña</string>
+    <string name="sucreg">TE HAS REGISTRADO</string>
+    <string name="ver">VERIFICAR</string>
+    <string name="seccode">Codigo de Seguridad</string>
+    <string name="veremail">VERIFIQUE SU CORREO ELECTRONICO INGRESANDO EL CODIGO QUE HA SIDO ENVIADO A SU MAIL</string>
+    <string name="aboutus">SOBRE NOSOTROS</string>
+    <string name="slogan">NOS DEDICAMOS A ACOMPAÑARTE  HACIA UNA VERSION MAS FUERTE  Y SALUDABLE DE TI MISMO</string>
+    <string name="resend">REENVIAR CODIGO</string>
 </resources>
+
+
+    <!--
+
+    Te has registrado
+
+  -->

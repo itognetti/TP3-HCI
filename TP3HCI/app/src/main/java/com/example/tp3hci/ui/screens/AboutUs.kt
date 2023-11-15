@@ -80,7 +80,7 @@ fun AboutUs() {
             modifier = Modifier
                 .padding(40.dp)
                 .padding(top = 200.dp)
-                .height(150.dp), // Ajusta la altura según sea necesario
+                .height(150.dp), // altura según sea necesario
 
 
         ) {
@@ -94,15 +94,15 @@ fun AboutUs() {
                     horizontalAlignment = Alignment.CenterHorizontally // Centra horizontalmente
             ) {
                 Text(
-                    text = "SOBRE NOSOTROS",
+                    text = stringResource(id = R.string.aboutus),
                     fontWeight = FontWeight.Black,
                     fontSize = 20.sp,
                     modifier = Modifier.padding(bottom = 8.dp)
                 )
 
-                // Aquí puedes agregar el texto que desees
+
                 Text(
-                    text="NOS DEDICAMOS A ACOMPAÑARTE  HACIA UNA VERSION MAS FUERTE  Y SALUDABLE DE TI MISMO",
+                    text= stringResource(id = R.string.slogan),
 
                     fontSize = 16.sp,
                     fontWeight = FontWeight.SemiBold,

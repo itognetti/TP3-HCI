@@ -2,14 +2,17 @@ package com.example.tp3hci.ui.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -35,22 +38,21 @@ import androidx.compose.ui.graphics.Color.Companion.Gray
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.font.FontWeight.Companion.Bold
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.tp3hci.R
-import com.example.tp3hci.ui.theme.BackCard
 import com.example.tp3hci.ui.theme.Black
 import com.example.tp3hci.ui.theme.FOrange
 import com.example.tp3hci.ui.theme.Grey
-import com.example.tp3hci.ui.theme.White
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview(showSystemUi = true)
 @Composable
-fun RegisterScreen() {
+fun SecurScreen() {
     var nombreCompleto by remember { mutableStateOf("") }
     var correoElectronico by remember { mutableStateOf("") }
     var contrasena by remember { mutableStateOf("") }
@@ -84,7 +86,7 @@ fun RegisterScreen() {
         Card(
             modifier = Modifier
                 .fillMaxWidth(0.8f)
-                .fillMaxHeight(0.8f)
+                .fillMaxHeight(0.7f)
                 .padding(top = 150.dp)
                 .align(Alignment.Center),
             shape = RoundedCornerShape(16.dp)
@@ -98,34 +100,23 @@ fun RegisterScreen() {
             ) {
                 Text(
                     fontWeight = Bold,
-                    text = stringResource(id = R.string.register),
+                    text = stringResource(id = R.string.sucreg),
                     fontSize = 30.sp,
                     color = Black,
+                    textAlign = TextAlign.Center
                 )
-                // Espacio para el nombre completo
-                TextField(
-                    value = nombreCompleto,
-                    onValueChange = { nombreCompleto = it },
-                    label = { Text(text = stringResource(id = R.string.login_name))},
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(8.dp)
-
-                )
-
-
                 Spacer(modifier = Modifier.height(16.dp))
+                Text(
+                    text=stringResource(id = R.string.veremail),
+                    //Verify your email writing the code that has been send to your email
+                    //CAMBIAR CON LOS DE STRING.XML
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    textAlign = TextAlign.Center
 
-                // Espacio para el correo electrónico
-                TextField(
-                    value = correoElectronico,
-                    onValueChange = { correoElectronico = it },
-                    label = { Text(text = stringResource(id = R.string.login_mail))},
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(8.dp)
 
                 )
+
 
                 Spacer(modifier = Modifier.height(16.dp))
 
@@ -133,25 +124,14 @@ fun RegisterScreen() {
                 TextField(
                     value = contrasena,
                     onValueChange = { contrasena = it },
-                    label = { Text(text = stringResource(id = R.string.login_password))},
+                    label = { Text(text = stringResource(id = R.string.seccode))},
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(8.dp)
-
                 )
 
-                Spacer(modifier = Modifier.height(16.dp))
 
-                // Espacio para la Repetir contraseña
-                TextField(
-                    value = contrasena,
-                    onValueChange = { contrasena = it },
-                    label = { Text(text = stringResource(id = R.string.login_repassword))},
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(8.dp)
 
-                )
 
                 Spacer(modifier = Modifier.height(16.dp))
 
@@ -164,10 +144,24 @@ fun RegisterScreen() {
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(50.dp)
-
                 ) {
-                    Text(text = stringResource(id = R.string.register))
+                    Text(text = stringResource(id = R.string.ver))
                 }
+
+                Spacer(modifier = Modifier.height(10.dp))
+
+                Text(
+                    text =stringResource(id = R.string.resend),
+                    modifier = Modifier
+                        .height(50.dp)
+                        .height(IntrinsicSize.Min) // Ajusta la altura al contenido
+                        .padding(16.dp) // Ajusta el relleno según sea necesario
+                        .clickable {
+                            // Agrega la lógica para reenviar el código aquí
+                        },
+                    textAlign = TextAlign.Center,
+                    color = FOrange // Color del texto
+                )
             }
         }
 
@@ -188,6 +182,7 @@ fun RegisterScreen() {
         }
     }
 }
+
 
 
 
