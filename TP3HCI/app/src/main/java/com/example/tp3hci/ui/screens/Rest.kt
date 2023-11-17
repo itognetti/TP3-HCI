@@ -41,8 +41,6 @@ import com.example.tp3hci.ui.theme.FOrange
 fun Rest() {
     var isTimerPaused by remember { mutableStateOf(false) }
 
-
-
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -75,7 +73,6 @@ fun Rest() {
                 modifier = Modifier.size(300.dp)
             )
         }
-
 
 
         Row(

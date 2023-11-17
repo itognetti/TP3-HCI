@@ -34,7 +34,7 @@ import com.example.tp3hci.ui.components.CardItem
 import com.example.tp3hci.ui.components.SearchBar
 import com.example.tp3hci.ui.theme.Black
 import com.example.tp3hci.ui.theme.FOrange
-@Preview(showSystemUi = true)
+
 
 @Composable
 fun SearchScreen() {
