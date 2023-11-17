@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Color.Companion.Red
 import com.example.tp3hci.Screen
 import com.example.tp3hci.ui.theme.FOrange
 import com.example.tp3hci.ui.theme.Black
@@ -41,15 +42,16 @@ fun BottomBar(
                         tint = if (currentRoute == item.route) FOrange else White
                     )
                 },
-                label = {
-                    Text(
-                        text = item.title,
-                        color = if (currentRoute == item.route) FOrange else White
-                    )
-                },
                 alwaysShowLabel = true,
                 selected = currentRoute == item.route,
                 onClick = { onNavigateToRoute(item.route) },
+
+            )
+        }
+    }
+}
+
+/*
 //                colors = NavigationBarItemColors(
 //                    selectedIconColor = FOrange,
 //                    selectedTextColor = FOrange,
@@ -57,8 +59,4 @@ fun BottomBar(
 //                    unselectedIconColor = White,
 //                    unselectedTextColor = White,
 //                ),
-            )
-        }
-    }
-}
-
+ */
