@@ -20,7 +20,7 @@ import com.example.tp3hci.ui.theme.FOrange
 
 @Composable
 //@Preview
-fun HomeScreen(OnNavegateTologinScreen:()->Unit) {
+fun HomeScreen() {
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
@@ -30,20 +30,6 @@ fun HomeScreen(OnNavegateTologinScreen:()->Unit) {
             text = stringResource(id = R.string.home_screen),
             fontSize = 30.sp
         )
-        Button(
-            onClick = {OnNavegateTologinScreen
-                // Agrega la lógica de iniciar sesión aquí
-            },
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(50.dp),
-            colors = ButtonDefaults.buttonColors(FOrange),
-        ) {
-            Text(
-                text = stringResource(id = R.string.login),
-                fontSize = 24.sp
-            )
-        }
     }
 }
 

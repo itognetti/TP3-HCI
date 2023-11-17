@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -48,7 +49,7 @@ import com.example.tp3hci.ui.theme.FOrange
 
 @Preview(showSystemUi = true)
 @Composable
-fun AboutUs() {
+fun AboutUs(onNavegateTologinRegisterScreen:()->Unit) {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -110,10 +111,20 @@ fun AboutUs() {
 
 
                 )
+                // MODIFICAR EL ICONO
+                IconButton(
+                    onClick = {
+                        onNavegateTologinRegisterScreen()
+                    }
+                ) {
+                    Icon(
+                        imageVector = Icons.Filled.Close,
+                        contentDescription = "Close",
+                        tint = FOrange,
+                        modifier = Modifier.size(300.dp)
+                    )
+                }
             }
         }
-
-
-
     }
 }

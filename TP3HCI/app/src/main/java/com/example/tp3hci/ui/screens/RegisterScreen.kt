@@ -50,7 +50,7 @@ import com.example.tp3hci.ui.theme.White
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview(showSystemUi = true)
 @Composable
-fun RegisterScreen() {
+fun RegisterScreen(onNavegateToSecurScreen:()->Unit) {
     var nombreCompleto by remember { mutableStateOf("") }
     var correoElectronico by remember { mutableStateOf("") }
     var contrasena by remember { mutableStateOf("") }
@@ -158,7 +158,7 @@ fun RegisterScreen() {
                 // Botón de registro
                 Button(
                     onClick = {
-                        // Agrega la lógica de registro aquí
+                        onNavegateToSecurScreen()
                     },
                     colors = ButtonDefaults.buttonColors(FOrange),
                     modifier = Modifier
@@ -169,22 +169,6 @@ fun RegisterScreen() {
                     Text(text = stringResource(id = R.string.register))
                 }
             }
-        }
-
-        IconButton(
-            onClick = {
-                // Agrega la lógica para más información aquí
-            },
-            modifier = Modifier
-                .align(Alignment.BottomEnd)
-                .padding(8.dp)
-        ) {
-            Icon(
-                imageVector = Icons.Filled.Info,
-                contentDescription = "Info",
-                tint = FOrange,
-                modifier = Modifier.size(35.dp)
-            )
         }
     }
 }

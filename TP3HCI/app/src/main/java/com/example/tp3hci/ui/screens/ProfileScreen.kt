@@ -37,15 +37,15 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.tp3hci.ui.theme.Black
 import com.example.tp3hci.ui.theme.MyBack
+import com.example.tp3hci.ui.theme.White
 
 
-@Preview(showSystemUi = true)
 @Composable
-fun ProfileScreen() {
+fun ProfileScreen(onNavegateTologinRegisterScreen:()->Unit) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(MyBack)
+            .background(Black)
     ) {
         Column(
             modifier = Modifier
@@ -56,7 +56,7 @@ fun ProfileScreen() {
         ) {
             Text(
                 text = stringResource(id = R.string.profile_screen),
-                color= Color.Black,
+                color = FOrange,
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Black,
             )
@@ -66,7 +66,8 @@ fun ProfileScreen() {
                 contentDescription = null,
                 modifier = Modifier
                     .size(150.dp)
-                    .clip(CircleShape)
+                    .clip(CircleShape),
+                tint = White
             )
 
             Spacer(modifier = Modifier.height(16.dp))
@@ -84,17 +85,17 @@ fun ProfileScreen() {
                     .fillMaxWidth()
                     .height(50.dp),
                 colors = ButtonDefaults.buttonColors(Color.Transparent),
-                border = BorderStroke(1.dp, FOrange),
+                border = BorderStroke(2.dp, FOrange),
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.Center
                 ) {
-                    Icon(Icons.Filled.Edit, contentDescription = null,tint=Color.Black,)
+                    Icon(Icons.Filled.Edit, contentDescription = null, tint = White)
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(
                         text = stringResource(id = R.string.edit_profile),
-                        color= Color.Black,
+                        color= White,
                         fontSize = 24.sp
                     )
                 }
@@ -105,7 +106,7 @@ fun ProfileScreen() {
             // Botón de Cerrar Sesión
             Button(
                 onClick = {
-                    // Agrega la lógica de cerrar sesión aquí
+                    onNavegateTologinRegisterScreen()
                 },
                 modifier = Modifier
                     .fillMaxWidth()
@@ -116,11 +117,11 @@ fun ProfileScreen() {
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.Center
                 ) {
-                    Icon(Icons.Filled.ExitToApp, contentDescription = null,tint=Color.Black,)
+                    Icon(Icons.Filled.ExitToApp, contentDescription = null,tint = White)
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(
                         text = stringResource(id = R.string.log_out_profile),
-                        color= Color.Black,
+                        color = White,
                         fontSize = 24.sp
                     )
                 }

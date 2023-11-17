@@ -29,13 +29,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.tp3hci.R
+import com.example.tp3hci.Screen
 import com.example.tp3hci.ui.theme.FOrange
 
 
 //fun LoginRegisterScreen(onLoginClick: () -> Unit, onRegisterClick: () -> Unit){
 @Preview
 @Composable
-fun LoginRegisterScreen() {
+fun LoginRegisterScreen(onNavegateToLoginScreen:()->Unit, onNavegateToRegisterScreen:()->Unit, onNavegateToAboutUs:()->Unit) {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -74,7 +75,7 @@ fun LoginRegisterScreen() {
             // Botón de Iniciar Sesión
             Button(
                 onClick = {
-                    // Agrega la lógica de iniciar sesión aquí
+                    onNavegateToLoginScreen()
                 },
                 modifier = Modifier
                     .fillMaxWidth()
@@ -92,7 +93,7 @@ fun LoginRegisterScreen() {
             // Botón de Registrarse
             Button(
                 onClick = {
-                    // Agrega la lógica de registrarse aquí
+                    onNavegateToRegisterScreen()
                 },
                 modifier = Modifier
                     .fillMaxWidth()
@@ -109,7 +110,7 @@ fun LoginRegisterScreen() {
 
         IconButton(
             onClick = {
-                // Agrega la lógica para más información aquí
+                onNavegateToAboutUs()
             },
             modifier = Modifier
                 .align(Alignment.BottomEnd)

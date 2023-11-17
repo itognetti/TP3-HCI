@@ -52,7 +52,7 @@ import com.example.tp3hci.ui.theme.Grey
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview(showSystemUi = true)
 @Composable
-fun SecurScreen() {
+fun SecurScreen(onNavegateToHomeScreen: () -> Unit) {
     var nombreCompleto by remember { mutableStateOf("") }
     var correoElectronico by remember { mutableStateOf("") }
     var contrasena by remember { mutableStateOf("") }
@@ -135,10 +135,10 @@ fun SecurScreen() {
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                // Botón de registro
+                // Botón de verify
                 Button(
                     onClick = {
-                        // Agrega la lógica de registro aquí
+                        onNavegateToHomeScreen()
                     },
                     colors = ButtonDefaults.buttonColors(FOrange),
                     modifier = Modifier
@@ -163,22 +163,6 @@ fun SecurScreen() {
                     color = FOrange // Color del texto
                 )
             }
-        }
-
-        IconButton(
-            onClick = {
-                // Agrega la lógica para más información aquí
-            },
-            modifier = Modifier
-                .align(Alignment.BottomEnd)
-                .padding(8.dp)
-        ) {
-            Icon(
-                imageVector = Icons.Filled.Info,
-                contentDescription = "Info",
-                tint = FOrange,
-                modifier = Modifier.size(35.dp)
-            )
         }
     }
 }

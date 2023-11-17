@@ -53,7 +53,7 @@ import com.example.tp3hci.ui.theme.White
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview(showSystemUi = true)
 @Composable
-fun LoginScreen() {
+fun LoginScreen(onNavegateToHomeScreen: () -> Unit) {
     var nombreCompleto by remember { mutableStateOf("") }
     var correoElectronico by remember { mutableStateOf("") }
     var contrasena by remember { mutableStateOf("") }
@@ -142,10 +142,10 @@ fun LoginScreen() {
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                // Botón de registro
+                // Botón de Inicio
                 Button(
                     onClick = {
-                        // Agrega la lógica de registro aquí
+                        onNavegateToHomeScreen()
                     },
                     colors = ButtonDefaults.buttonColors(FOrange),
                     modifier = Modifier
@@ -157,29 +157,6 @@ fun LoginScreen() {
                 }
 
             }
-        }
-
-
-
-
-
-
-
-        IconButton(
-            onClick = {
-                // Agrega la lógica para más información aquí
-            },
-            modifier = Modifier
-                .align(Alignment.BottomEnd)
-                .padding(8.dp)
-        ) {
-
-            Icon(
-                imageVector = Icons.Filled.Info,
-                contentDescription = "Info",
-                tint = FOrange,
-                modifier = Modifier.size(35.dp)
-            )
         }
     }
 }
