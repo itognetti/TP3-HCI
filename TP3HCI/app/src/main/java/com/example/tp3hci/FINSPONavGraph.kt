@@ -17,7 +17,7 @@ import com.example.tp3hci.ui.screens.SecurScreen
 fun FINSPONavGraph(navController: NavHostController) {
     NavHost(
         navController = navController,
-        startDestination = Screen.HomeScreen.route
+        startDestination = Screen.LoginRegisterScreen.route
     ) {
         composable(Screen.HomeScreen.route) {
             HomeScreen()

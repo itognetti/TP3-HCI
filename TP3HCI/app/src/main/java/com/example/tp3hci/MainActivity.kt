@@ -22,24 +22,31 @@ class MainActivity : ComponentActivity() {
                 val navController = rememberNavController()
                 val navBackStackEntry by navController.currentBackStackEntryAsState()
                 val currentRoute = navBackStackEntry?.destination?.route
+
+                // Determinar si se debe mostrar la BottomBar
+                val shouldShowBottomBar = currentRoute == Screen.HomeScreen.route
+                        || currentRoute == Screen.SearchScreen.route
+                        || currentRoute == Screen.ProfileScreen.route
+
                 Scaffold(
                     bottomBar = {
-                        BottomBar(
-                            currentRoute = currentRoute
-                        ) { route ->
-                            navController.navigate(route) {
-                                popUpTo(navController.graph.findStartDestination().id) {
-                                    saveState = true
+                        if (shouldShowBottomBar) {
+                            BottomBar(
+                                currentRoute = currentRoute
+                            ) { route ->
+                                navController.navigate(route) {
+                                    popUpTo(navController.graph.findStartDestination().id) {
+                                        saveState = true
+                                    }
+                                    launchSingleTop = true
+                                    restoreState = true
                                 }
-                                launchSingleTop = true
-                                restoreState = true
                             }
                         }
                     }
                 ) {
                     FINSPONavGraph(navController = navController)
                 }
-//              FINSPONavHost(navController = navController)
             }
         }
     }
